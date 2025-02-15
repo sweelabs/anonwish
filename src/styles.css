@@ -172,9 +172,135 @@ body {
     color: #ff6347;
   }
 /* Кнопка авторизации через Google */
-.auth-buttons {
-    margin-top: 20px;
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #000;
+}
+
+.auth-form {
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.auth-form h2 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.input-container {
+  margin-bottom: 1rem;
+}
+
+.input-container input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background-color: #2c2c2c;
+  color: #fff;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.input-container input:focus {
+  border-color: #ff6347;
+  outline: none;
+}
+
+.auth-button {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  background-color: #ff6347;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.auth-button:hover {
+  background-color: #e05934;
+}
+
+.google-auth-button {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  background-color: #4285f4;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.google-auth-button:hover {
+  background-color: #357ae8;
+}
+
+.toggle-auth {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.toggle-auth p {
+  color: #ff6347;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.toggle-auth p:hover {
+  text-decoration: underline;
+}
+
+/* Мобильные стили */
+@media (max-width: 480px) {
+  .auth-form {
+    padding: 1.5rem;
   }
+
+  .auth-form h2 {
+    font-size: 1.25rem;
+  }
+
+  .input-container input {
+    padding: 0.5rem;
+    font-size: 16px;
+  }
+
+  .auth-button,
+  .google-auth-button {
+    padding: 0.5rem;
+    font-size: 16px;
+  }
+}
+
+/* Исправление проблем с масштабированием на iOS */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  select,
+  textarea,
+  input {
+    font-size: 16px;
+  }
+}
+
+/* Отключение подсветки при тапе на iOS */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
   
   button {
     background-color: #4285f4; /* Цвет кнопки Google */
@@ -930,4 +1056,114 @@ input:focus, textarea:focus, button:focus {
 
 .input-container input::placeholder {
   color: #bdbdbd;
+}
+
+/* Добавьте эти стили в конец вашего styles.css */
+
+/* Исправление размеров карточек на мобильных устройствах */
+@media (max-width: 768px) {
+  .wish-grid {
+    grid-template-columns: 1fr;
+    padding: 0.5rem;
+  }
+
+  .wish-card {
+    width: 100%;
+    max-width: none;
+    margin: 0 0 1rem 0;
+    transform: none !important;
+  }
+
+  .wish-card:hover {
+    transform: none !important;
+  }
+
+  .card-header {
+    padding: 0.75rem;
+  }
+
+  .user-avatar {
+    width: 30px;
+    height: 30px;
+    font-size: 0.9rem;
+  }
+
+  .user-name {
+    font-size: 0.9rem;
+  }
+
+  .card-body {
+    padding: 1rem;
+  }
+
+  .wish-text {
+    font-size: 0.9rem;
+    min-height: auto;
+  }
+
+  .wallet-info {
+    padding: 0.5rem;
+  }
+
+  .wallet-address {
+    font-size: 0.8rem;
+  }
+
+  /* Отключение анимаций на мобильных устройствах */
+  .wish-card, .wish-card:hover {
+    animation: none;
+    transition: none;
+  }
+  
+  /* Фиксированные размеры для кнопок */
+  .delete-btn, .edit-btn {
+    font-size: 1.2rem;
+    padding: 0.3rem;
+    margin: 0 0.2rem;
+  }
+
+  /* Исправление модального окна на мобильных устройствах */
+  .edit-modal-content {
+    width: 95%;
+    padding: 1rem;
+    margin: 0.5rem;
+  }
+
+  .edit-modal-content textarea,
+  .edit-modal-content input {
+    font-size: 16px;
+    padding: 0.5rem;
+  }
+
+  .edit-modal-content .submit-button,
+  .edit-modal-content .cancel-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Отключение масштабирования на iOS */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  input, textarea, select {
+    font-size: 16px !important;
+  }
+}
+
+/* Сброс стилей для всех элементов на мобильных устройствах */
+@media (max-width: 768px) {
+  * {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    animation: none !important;
+    transition: none !important;
+  }
+  
+  .wish-container {
+    padding: 0.5rem;
+  }
+  
+  .wish-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
 }
