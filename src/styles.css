@@ -787,4 +787,147 @@ body {
     background-color: #e55347;
   }
   
-  
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+  /* Контейнер для кнопок */
+  .buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Кнопки, идущие друг под другом */
+  .buttons-container a {
+    margin-bottom: 1rem;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links a {
+    margin-bottom: 1rem;
+  }
+
+  .buttons-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .buttons-container a {
+    margin-bottom: 1rem;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .message-board {
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .wish-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .wish-list {
+    margin-top: 2rem;
+  }
+
+  .wish-item {
+    background-color: #1e1e1e;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    width: 100%;
+    text-align: left;
+  }
+
+  .auth-container {
+    height: auto;
+    padding: 20px;
+  }
+
+  .auth-form {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  /* Отключение анимаций и переходов на мобильных устройствах */
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Отключение автоматического увеличения для элементов формы */
+input, textarea, button {
+  font-size: 16px; /* Установите размер шрифта по вашему усмотрению */
+}
+
+/* Убедитесь, что элементы формы не увеличиваются при фокусе */
+input:focus, textarea:focus, button:focus {
+  outline: none; /* Убираем стандартное оформление фокуса */
+  box-shadow: none; /* Убираем тень при фокусе */
+}
+
+/* Управление стилями кнопок */
+.auth-button, .google-auth-button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  background-color: #6200ea;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.auth-button:hover, .google-auth-button:hover {
+  background-color: #3700b3;
+}
+
+/* Управление стилями формы авторизации */
+.auth-form {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #1f1f1f;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.auth-form h2 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.input-container input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #6200ea;
+  border-radius: 5px;
+  background-color: #121212;
+  color: white;
+  margin-top: 5px;
+}
+
+.input-container input::placeholder {
+  color: #bdbdbd;
+}

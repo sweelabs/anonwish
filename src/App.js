@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Route, Routes, Link, Navigate } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes, Link, Navigate } from 'react-router-dom';  // Изменено на HashRouter
 import './styles.css';
 import MessageBoard from './MessageBoard';
 import WishList from './WishList';
@@ -13,8 +13,10 @@ const Home = () => (
     <div className="banner">
       <h1>🌟 Добро пожаловать на AnonWish</h1>
       <p>Представьте, что вы можете загадать желание и кто-то поможет ему сбыться.</p>
-      <Link to="/wishlist" className="cta-button">Список желаний</Link>
-      <Link to="/messages" className="learn-more-button">Оставить желание</Link>
+      <div className="buttons-container">
+        <Link to="/wishlist" className="cta-button">Список желаний</Link>
+        <Link to="/messages" className="learn-more-button">Оставить желание</Link>
+      </div>
     </div>
   </div>
 );
