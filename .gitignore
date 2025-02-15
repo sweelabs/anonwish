@@ -1,0 +1,5 @@
+# Игнорировать папки и файлы, которые содержат конфиденциальную информацию
+/admin-scripts/credentials/
+/admin-scripts/setAdminRole.js
+*.json
+node_modules
