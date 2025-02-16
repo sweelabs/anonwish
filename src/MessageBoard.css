@@ -88,3 +88,75 @@
     background-color: #c82333;
   }
   
+  /* Отключение анимаций и переходов на мобильных устройствах */
+@media (max-width: 768px) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .wish-card, .wish-card:hover {
+    animation: none;
+    transition: none;
+  }
+}
+
+/* Убираем анимации в hover */
+.message-board .wish-form button {
+  transform: none;
+}
+
+/* Убираем анимации в кнопках */
+.auth-button, .google-auth-button {
+  transition: none;
+}
+
+.message-board button {
+  transition: none;
+}
+
+/* Убираем эффект наведения и изменения цвета для логина и пароля */
+input[type="text"], input[type="password"], input[type="email"] {
+  background-color: #f0f0f0;
+  border: 2px solid #ccc;
+  color: #333;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  transition: none; /* Убираем эффект на наведение */
+}
+
+/* Сделаем кнопки стабильного синего цвета */
+button {
+  background-color: #007bff; /* Синий цвет */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Убираем изменения цвета при наведении на кнопку */
+button:hover {
+  background-color: #007bff; /* Синий не меняется */
+}
+
+/* Добавляем анимацию для кнопки "Отправить желание" */
+#send-wish-btn {
+  animation: buttonClickAnimation 0.5s ease-in-out;
+}
+
+@keyframes buttonClickAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
