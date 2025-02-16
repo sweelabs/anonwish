@@ -11,7 +11,8 @@ import Contact from './contact'; // Импорт компонента Contact
 const Home = () => (
   <div className="container">
     <div className="banner">
-      <h1>🌟 Добро пожаловать на AnonWish</h1>
+      <h1>🌟 Добро пожаловать на sweelabs.
+        github.io</h1>
       <p>Представьте, что вы можете загадать желание и кто-то поможет ему сбыться.</p>
       <div className="buttons-container">
         <Link to="/wishlist" className="cta-button">Список желаний</Link>
