@@ -123,6 +123,8 @@ body {
   .submit-button, .reset-cooldown-button, .delete-button, .cancel-button {
     padding: 12px;
     font-size: 14px; /* Уменьшаем шрифт на мобильных */
+    height: auto; /* Убираем фиксированную высоту */
+    box-sizing: border-box; /* Учитываем паддинги в ширине */
   }
 
   /* Исправление для иконок */
