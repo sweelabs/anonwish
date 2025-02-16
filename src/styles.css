@@ -944,6 +944,7 @@ body {
 
 /* Адаптивные стили */
 /* Отключение анимаций и переходов на мобильных устройствах */
+/* Отключение анимаций и переходов на мобильных устройствах */
 @media (max-width: 768px) {
   * {
     animation: none !important;
@@ -958,7 +959,6 @@ body {
 
 /* Убираем анимации в hover */
 .message-board .wish-form button {
-   background-color: #ff9900; /* Цвет остаётся прежним */
   transform: none;
 }
 
@@ -992,7 +992,7 @@ button {
   font-size: 16px;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: none; /* Убираем эффект при наведении */
 }
 
 /* Убираем изменения цвета при наведении на кнопку */
@@ -1000,20 +1000,112 @@ button:hover {
   background-color: #007bff; /* Синий не меняется */
 }
 
-/* Добавляем анимацию для кнопки "Отправить желание" */
-#send-wish-btn {
-  animation: buttonClickAnimation 0.5s ease-in-out;
+/* Дополнительные стили для мобильных устройств */
+.auth-form {
+  padding: 1.5rem;
 }
 
-@keyframes buttonClickAnimation {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(0.9);
-  }
-  100% {
-    transform: scale(1);
-  }
+.auth-form h2 {
+  font-size: 1.25rem;
 }
 
+.input-container input {
+  padding: 0.5rem;
+  font-size: 16px;
+}
+
+.auth-button,
+.google-auth-button {
+  padding: 0.5rem;
+  font-size: 16px;
+}
+
+/* Исправление размеров карточек на мобильных устройствах */
+.wish-grid {
+  grid-template-columns: 1fr;
+  padding: 0.5rem;
+}
+
+.wish-card {
+  width: 100%;
+  max-width: none;
+  margin: 0 0 1rem 0;
+  transform: none !important;
+}
+
+.wish-card:hover {
+  transform: none !important;
+}
+
+.card-header {
+  padding: 0.75rem;
+}
+
+.user-avatar {
+  width: 30px;
+  height: 30px;
+  font-size: 0.9rem;
+}
+
+.user-name {
+  font-size: 0.9rem;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.wish-text {
+  font-size: 0.9rem;
+  min-height: auto;
+}
+
+.wallet-info {
+  padding: 0.5rem;
+}
+
+.wallet-address {
+  font-size: 0.8rem;
+}
+
+/* Фиксированные размеры для кнопок */
+.delete-btn, .edit-btn {
+  font-size: 1.2rem;
+  padding: 0.3rem;
+  margin: 0 0.2rem;
+}
+
+/* Исправление модального окна на мобильных устройствах */
+.edit-modal-content {
+  width: 95%;
+  padding: 1rem;
+  margin: 0.5rem;
+}
+
+.edit-modal-content textarea,
+.edit-modal-content input {
+  font-size: 16px;
+  padding: 0.5rem;
+}
+
+.edit-modal-content .submit-button,
+.edit-modal-content .cancel-button {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  transition: none; /* Убираем эффект при наведении */
+}
+
+/* Убираем изменение фона при наведении */
+.edit-modal-content .submit-button:hover {
+  background-color: #007BFF; /* Цвет остаётся прежним */
+}
+
+.edit-modal-content .cancel-button:hover {
+  background-color: #444; /* Цвет остаётся прежним */
+}
+
+/* Дополнительное правило, чтобы не было эффекта фокуса на кнопках */
+.edit-modal-content .submit-button:focus,
+.edit-modal-content .cancel-button:focus {
+  outline: none;
+}
