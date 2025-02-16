@@ -983,21 +983,21 @@ input[type="text"], input[type="password"], input[type="email"] {
   transition: none; /* Убираем эффект на наведение */
 }
 
-/* Сделаем кнопки стабильного синего цвета */
+/* Стили для кнопок */
 button {
-  background-color: #007bff; /* Синий цвет */
+  background-color: #ff6347; /* Цвет кнопок, как на ПК */
   color: white;
   border: none;
   padding: 10px 20px;
   font-size: 16px;
   border-radius: 5px;
   cursor: pointer;
-  transition: none; /* Убираем эффект при наведении */
+  transition: background-color 0.3s ease; /* Возвращаем плавный переход */
 }
 
-/* Убираем изменения цвета при наведении на кнопку */
+/* Изменение цвета при наведении на кнопку */
 button:hover {
-  background-color: #007bff; /* Синий не меняется */
+  background-color: #e05934; /* Темно-оранжевый цвет при наведении */
 }
 
 /* Дополнительные стили для мобильных устройств */
@@ -1016,8 +1016,9 @@ button:hover {
 
 .auth-button,
 .google-auth-button {
-  padding: 0.5rem;
+  padding: 0.75rem;
   font-size: 16px;
+  margin-top: 1rem;
 }
 
 /* Исправление размеров карточек на мобильных устройствах */
@@ -1092,16 +1093,16 @@ button:hover {
 .edit-modal-content .cancel-button {
   padding: 0.5rem 1rem;
   font-size: 0.9rem;
-  transition: none; /* Убираем эффект при наведении */
+  transition: background-color 0.3s ease; /* Возвращаем плавный переход */
 }
 
 /* Убираем изменение фона при наведении */
 .edit-modal-content .submit-button:hover {
-  background-color: #007BFF; /* Цвет остаётся прежним */
+  background-color: #e05934; /* Темно-оранжевый цвет */
 }
 
 .edit-modal-content .cancel-button:hover {
-  background-color: #444; /* Цвет остаётся прежним */
+  background-color: #444; /* Темный цвет */
 }
 
 /* Дополнительное правило, чтобы не было эффекта фокуса на кнопках */
