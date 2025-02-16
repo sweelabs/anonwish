@@ -2,7 +2,7 @@ import React, { useEffect, useState, useCallback } from 'react';
 import { fetchData, deleteData, updateData } from './firebase';
 import { auth, db } from './firebase';
 import { doc, getDoc, collection, onSnapshot } from 'firebase/firestore';
-import './styles.css';
+import './WishList.css';
 
 const WishList = () => {
   const [wishes, setWishes] = useState([]);
