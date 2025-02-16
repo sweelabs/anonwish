@@ -45,17 +45,19 @@
   .submit-button {
     width: 100%;
     padding: 12px;
-    background-color: #007BFF;
+    background-color: #007BFF; /* Статичный синий цвет */
     color: white;
     border: none;
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transform: none; /* Кнопка не двигается */
   }
   
+  /* Убираем изменение цвета при наведении */
   .submit-button:hover {
-    background-color: #0056b3;
+    background-color: #007BFF; /* Цвет остаётся прежним */
+    transform: none; /* Кнопка не двигается */
   }
   
   .wish-list {
