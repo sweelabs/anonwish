@@ -71,6 +71,8 @@ body {
   font-size: 16px;
   cursor: pointer;
   font-weight: bold;
+  text-align: center;
+  box-sizing: border-box; /* Учитываем паддинги в ширине */
   transition: background-color 0.3s ease;
 }
 
@@ -120,6 +122,7 @@ body {
 
   .submit-button, .reset-cooldown-button, .delete-button, .cancel-button {
     padding: 12px;
+    font-size: 14px; /* Уменьшаем шрифт на мобильных */
   }
 
   /* Исправление для иконок */
