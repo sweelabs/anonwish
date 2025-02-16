@@ -1,29 +1,39 @@
-/* src/Auth.css */
+/* Общие стили */
 .auth-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  background-color: #000000;
-  padding: 20px;
+  height: 100vh;
+  background: linear-gradient(135deg, #000000, #000000);
 }
 
+/* Стеклянный эффект */
 .auth-form {
-  background-color: #1f1f1f;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  width: 100%;
-  max-width: 350px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
   text-align: center;
+  width: 350px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+/* Заголовок */
 .auth-form h2 {
-  color: white;
-  margin-bottom: 20px;
+  color: #fff;
   font-size: 24px;
+  margin-bottom: 20px;
 }
 
+/* Ошибки */
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* Инпуты */
 .input-container {
   margin-bottom: 15px;
 }
@@ -31,75 +41,93 @@
 .input-container input {
   width: 100%;
   padding: 12px;
-  border: 1px solid #333;
-  border-radius: 5px;
-  background-color: #2d2d2d;
-  color: white;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  outline: none;
   font-size: 16px;
-  margin-top: 5px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  transition: all 0.3s;
 }
 
-.input-container input::placeholder {
-  color: #bdbdbd;
+/* Подсветка инпутов */
+.input-container input:focus {
+  border-color: #00f0ff;
+  background: rgba(255, 255, 255, 0.2);
 }
 
-.auth-button,
-.google-auth-button {
+/* Кнопки */
+.auth-button, .google-auth-button {
   width: 100%;
-  padding: 14px;
-  margin-top: 20px;
-  background-color: #ff6b6b;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  padding: 12px;
   font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 15px;
   font-weight: bold;
 }
 
-.auth-button:hover,
-.google-auth-button:hover {
-  background-color: #ff5252;
+/* Основная кнопка */
+.auth-button {
+  background: linear-gradient(90deg, #ff416c, #ff4b2b);
+  color: white;
+  box-shadow: 0 4px 10px rgba(255, 65, 108, 0.3);
 }
 
-.toggle-auth {
-  margin-top: 15px;
+.auth-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 65, 108, 0.5);
 }
 
-.toggle-auth p {
-  color: #ff6b6b;
-  cursor: pointer;
-}
-
+/* Кнопка Google */
 .google-auth-button {
-  background-color: #4285F4;
+  background: #4285F4;
+  color: white;
 }
 
 .google-auth-button:hover {
-  background-color: #357ae8;
+  transform: scale(1.05);
+  background: #357ae8;
 }
 
-/* Медиа-запрос для мобильных устройств */
-@media (max-width: 768px) {
+/* Переключение между входом и регистрацией */
+.toggle-auth p {
+  margin-top: 15px;
+  color: white;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+.toggle-auth p:hover {
+  color: #00f0ff;
+}
+
+/* Адаптивность */
+@media (max-width: 400px) {
   .auth-form {
-      padding: 20px;
-  }
-  
-  .auth-form h2 {
-      font-size: 20px;
-  }
-  
-  .input-container input {
-      padding: 10px;
-  }
-  
-  .auth-button,
-  .google-auth-button {
-      padding: 12px;
+    width: 90%;
   }
 }
+@media (max-width: 600px) {
+  .auth-form {
+    width: 90%;
+    padding: 30px;
+  }
 
-/* Исправление для иконок на мобильных устройствах */
-.icon {
-  font-family: Arial, sans-serif;
+  .input-container input {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .auth-button, .google-auth-button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .toggle-auth p {
+    font-size: 12px;
+  }
 }

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { addData, fetchData, deleteData, auth, db } from './firebase';
 import { Link } from 'react-router-dom';
 import { doc, getDoc } from 'firebase/firestore';
-import './styles.css';
+import './MessageBoard.css';
 
 const MessageBoard = () => {
   const [message, setMessage] = useState('');
