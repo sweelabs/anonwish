@@ -1,25 +1,137 @@
-.auth-button, .google-auth-button {
+/* Общие стили */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #000000, #000000);
+}
+
+/* Стеклянный эффект */
+.auth-form {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 350px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Заголовок */
+.auth-form h2 {
+  color: #fff;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Ошибки */
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* Инпуты */
+.input-container {
+  margin-bottom: 15px;
+}
+
+.input-container input {
   width: 100%;
   padding: 12px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  outline: none;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  transition: all 0.3s;
+}
+
+/* Подсветка инпутов */
+.input-container input:focus {
+  border-color: #00f0ff;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Кнопки */
+.auth-button, .google-auth-button {
+  width: auto; /* Фикс для мобильных */
+  max-width: 90%; /* Чтобы не раздувалась */
+  height: 45px; /* Фиксируем высоту */
+  padding: 10px 20px;
   font-size: 16px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  margin-top: 15px;
   font-weight: bold;
-  background: linear-gradient(90deg, #ff416c, #ff4b2b);
-  color: white;
-  box-shadow: none !important; /* Убираем тень */
-  transition: none !important; /* Убираем анимации */
-  transform: none !important; /* Убираем движения */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box; /* Фикс для ширины */
 }
 
-/* Полностью убираем эффекты при наведении */
-.auth-button:hover, .google-auth-button:hover,
-.auth-button:focus, .google-auth-button:focus {
-  transform: none !important;
-  box-shadow: none !important;
-  background: linear-gradient(90deg, #ff416c, #ff4b2b); /* Оставляем тот же фон */
-  filter: none !important; /* Убираем возможные фильтры */
-  outline: none !important; /* Убираем обводку */
+/* Основная кнопка */
+.auth-button {
+  background: linear-gradient(90deg, #ff416c, #ff4b2b);
+  color: white;
+  box-shadow: 0 4px 10px rgba(255, 65, 108, 0.3);
+}
+
+.auth-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 65, 108, 0.5);
+}
+
+/* Кнопка Google */
+.google-auth-button {
+  background: #4285F4;
+  color: white;
+}
+
+.google-auth-button:hover {
+  transform: scale(1.05);
+  background: #357ae8;
+}
+
+/* Переключение между входом и регистрацией */
+.toggle-auth p {
+  margin-top: 15px;
+  color: white;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+.toggle-auth p:hover {
+  color: #00f0ff;
+}
+
+/* Адаптивность */
+@media (max-width: 400px) {
+  .auth-form {
+    width: 90%;
+  }
+}
+
+/* Исправление кнопок на мобильных */
+@media (max-width: 768px) {
+  .auth-button, .google-auth-button {
+    width: 90%;
+    height: 45px;
+    font-size: 14px;
+    padding: 10px;
+    transform: none !important; /* Убираем эффект увеличения */
+  }
+
+  input:focus, button:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  button {
+    -webkit-tap-highlight-color: transparent;
+  }
 }
