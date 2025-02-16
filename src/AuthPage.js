@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { GoogleAuthProvider, signInWithPopup, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from './firebase';
+import './styles.css'; // Импорт вашего CSS файла
 import './Auth.css'; // Импорт вашего CSS файла
 import { useNavigate } from 'react-router-dom';
 
