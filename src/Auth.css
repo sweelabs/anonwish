@@ -1,104 +1,105 @@
 /* src/Auth.css */
 .auth-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #000000; /* Темный фон для страницы авторизации */
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #000000;
+  padding: 20px;
+}
+
+.auth-form {
+  background-color: #1f1f1f;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+}
+
+.auth-form h2 {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.input-container {
+  margin-bottom: 15px;
+}
+
+.input-container input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  background-color: #2d2d2d;
+  color: white;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.input-container input::placeholder {
+  color: #bdbdbd;
+}
+
+.auth-button,
+.google-auth-button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 20px;
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.auth-button:hover,
+.google-auth-button:hover {
+  background-color: #ff5252;
+}
+
+.toggle-auth {
+  margin-top: 15px;
+}
+
+.toggle-auth p {
+  color: #ff6b6b;
+  cursor: pointer;
+}
+
+.google-auth-button {
+  background-color: #4285F4;
+}
+
+.google-auth-button:hover {
+  background-color: #357ae8;
+}
+
+/* Медиа-запрос для мобильных устройств */
+@media (max-width: 768px) {
   .auth-form {
-    background-color: #1f1f1f; /* Темный фон для формы */
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 350px;
-    text-align: center;
+      padding: 20px;
   }
   
   .auth-form h2 {
-    color: white;
-    margin-bottom: 20px;
-  }
-  
-  .input-container {
-    margin-bottom: 15px;
+      font-size: 20px;
   }
   
   .input-container input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #6200ea; /* Фиолетовая граница */
-    border-radius: 5px;
-    background-color: #121212; /* Темный фон для инпута */
-    color: white;
-    margin-top: 5px;
+      padding: 10px;
   }
   
-  .input-container input::placeholder {
-    color: #bdbdbd;
-  }
-  
-  .auth-button, .google-auth-button {
-    width: 100%;
-    padding: 12px;
-    margin-top: 20px;
-    background-color: #6200ea; /* Фиолетовый цвет кнопок */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: none;
-  }
-  
-  .auth-button:hover, .google-auth-button:hover {
-    background-color: #3700b3; /* Темнее при наведении */
-  }
-  
-  .toggle-auth {
-    margin-top: 15px;
-  }
-  
-  .toggle-auth p {
-    color: #6200ea;
-    cursor: pointer;
-  }
-  
+  .auth-button,
   .google-auth-button {
-    background-color: #4285F4; /* Синий цвет кнопки Google */
-    margin-top: 20px;
-    transition: none;
+      padding: 12px;
   }
-  
-  .google-auth-button:hover {
-    background-color: #357ae8;
-    transition: none;
-  }
-  
-  .auth-button, .google-auth-button {
-    margin-top: 20px;
-    transition: none;
-  }
-  
-  .auth-button, .google-auth-button {
-    width: 100%;
-    padding: 12px;
-    margin-top: 20px;
-    background-color: #6200ea; /* Фиолетовый цвет кнопок */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: none;
-  }
-  
-  .auth-button:hover, .google-auth-button:hover {
-    background-color: #0e0e0e; /* Темнее при наведении */
-    transition: none;
-  }
-  /* Скрываем элементы, которые не относятся к логину и регистрации */
-.main-content {
-    display: none;
-  }
+}
+
+/* Исправление для иконок на мобильных устройствах */
+.icon {
+  font-family: Arial, sans-serif;
+}

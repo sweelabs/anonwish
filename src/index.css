@@ -12,3 +12,9 @@ code {
     monospace;
 }
 
+/* В index.css */
+@font-face {
+  font-family: 'Your Font';
+  src: url('/fonts/your-font.woff2') format('woff2');
+  font-display: swap;
+}

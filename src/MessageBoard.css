@@ -1,164 +1,214 @@
 /* MessageBoard.css */
 .message-board {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-  }
-  
-  .message-board h2 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.message-board h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.wish-form {
+  display: flex;
+  flex-direction: column;
+  background-color: #1f1f1f;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #2d2d2d;
+  color: #ffffff;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.form-control:focus {
+  border-color: #ff6b6b;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 107, 107, 0.2);
+}
+
+.submit-button {
+  width: 100%;
+  padding: 14px;
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.submit-button:hover {
+  background-color: #ff5252;
+}
+
+.wish-list {
+  margin-top: 20px;
+}
+
+.wish-item {
+  background-color: #1f1f1f;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #ffffff;
+}
+
+.wish-item p {
+  margin: 5px 0;
+}
+
+.delete-button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
+
+/* Стили для мобильных устройств */
+@media (max-width: 768px) {
+  .message-board {
+      padding: 10px;
   }
   
   .wish-form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  .form-group label {
-    margin-bottom: 5px;
-    color: #555;
-    font-weight: bold;
+      padding: 15px;
   }
   
   .form-control {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-  }
-  
-  .form-control:focus {
-    border-color: #007BFF;
-    outline: none;
+      font-size: 16px;
+      padding: 10px;
   }
   
   .submit-button {
-    width: 100%;
-    padding: 12px;
-    background-color: #007BFF; /* Статичный синий цвет */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transform: none; /* Кнопка не двигается */
+      padding: 12px;
   }
   
-  /* Убираем изменение цвета при наведении */
-  .submit-button:hover {
-    background-color: #007BFF; /* Цвет остаётся прежним */
-    transform: none; /* Кнопка не двигается */
+  /* Исправление для иконок */
+  .question-icon {
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #4A90E2;
+      border-radius: 50%;
+      color: white;
+      font-weight: bold;
   }
   
-  .wish-list {
-    margin-top: 20px;
+  /* Замена эмодзи на текстовые иконки */
+  .edit-btn::before {
+      content: "✎";
+      font-family: Arial, sans-serif;
   }
   
-  .wish-item {
-    background-color: #f9f9f9;
-    padding: 15px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .wish-item p {
-    margin: 5px 0;
-  }
-  
-  .delete-button {
-    background-color: #dc3545;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .delete-button:hover {
-    background-color: #c82333;
-  }
-  
-  /* Отключение анимаций и переходов на мобильных устройствах */
-@media (max-width: 768px) {
-  * {
-    animation: none !important;
-    transition: none !important;
-  }
-
-  .wish-card, .wish-card:hover {
-    animation: none;
-    transition: none;
+  .delete-btn::before {
+      content: "×";
+      font-family: Arial, sans-serif;
   }
 }
 
-/* Убираем анимации в hover */
-.message-board .wish-form button {
-  transform: none;
+/* Обновленные стили для кнопок и иконок */
+.card-header button {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 5px;
+  margin-left: 5px;
 }
 
-/* Убираем анимации в кнопках */
-.auth-button, .google-auth-button {
-  transition: none;
+.edit-btn, .delete-btn {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
 }
 
-.message-board button {
-  transition: none;
+/* Стили для модального окна редактирования */
+.edit-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
 }
 
-/* Убираем эффект наведения и изменения цвета для логина и пароля */
-input[type="text"], input[type="password"], input[type="email"] {
-  background-color: #f0f0f0;
-  border: 2px solid #ccc;
-  color: #333;
-  font-size: 16px;
-  padding: 10px;
+.edit-modal-content {
+  background-color: #1f1f1f;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.edit-form textarea,
+.edit-form input {
   width: 100%;
+  padding: 10px;
+  border: 1px solid #333;
   border-radius: 5px;
-  transition: none; /* Убираем эффект на наведение */
+  background-color: #2d2d2d;
+  color: #ffffff;
 }
 
-/* Сделаем кнопки стабильного синего цвета */
-button {
-  background-color: #007bff; /* Синий цвет */
+.edit-form button {
+  margin-top: 10px;
+}
+
+.cancel-button {
+  background-color: #6c757d;
   color: white;
   border: none;
-  padding: 10px 20px;
-  font-size: 16px;
   border-radius: 5px;
+  padding: 10px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  margin-top: 10px;
 }
 
-/* Убираем изменения цвета при наведении на кнопку */
-button:hover {
-  background-color: #007bff; /* Синий не меняется */
-}
-
-/* Добавляем анимацию для кнопки "Отправить желание" */
-#send-wish-btn {
-  animation: buttonClickAnimation 0.5s ease-in-out;
-}
-
-@keyframes buttonClickAnimation {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(0.9);
-  }
-  100% {
-    transform: scale(1);
-  }
+.cancel-button:hover {
+  background-color: #5a6268;
 }

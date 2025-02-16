@@ -1219,3 +1219,14 @@ button:hover {
 .main-content {
   display: none;
 }
+
+/* Вместо использования emoji или Unicode-символов */
+.question-icon {
+  width: 24px;
+  height: 24px;
+  background-color: #4A90E2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
