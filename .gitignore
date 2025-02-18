@@ -8,5 +8,6 @@ admin-scripts/
 
 # Если хотите игнорировать только конкретный .json файл
 admin-scripts/credentials/mynewproject-ee25c-firebase-adminsdk-fbsvc-213c628382.json
-node_modules  не отслежит эти же
+
+# Игнорируем папку node_modules
 node_modules
