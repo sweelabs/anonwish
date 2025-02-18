@@ -1,16 +1,12 @@
-<<<<<<< HEAD
 # Игнорировать папки и файлы, которые содержат конфиденциальную информацию
 /admin-scripts/credentials/
 /admin-scripts/setAdminRole.js
 *.json
-=======
-# Игнорируем папку credentials внутри admin-scripts
-admin-scripts/credentials/
 
-# Игнорируем весь содержимое папки admin-scripts (если не хотите отслеживать ничего в этой папке)
+# Игнорируем всю папку admin-scripts, если не хотите отслеживать ничего в этой папке
 admin-scripts/
 
-# Если хотите игнорировать только .json файл
+# Если хотите игнорировать только конкретный .json файл
 admin-scripts/credentials/mynewproject-ee25c-firebase-adminsdk-fbsvc-213c628382.json
->>>>>>> 5f53d2b (Добавлены файлы проекта, включая .gitignore и другие)
+node_modules  не отслежит эти же
 node_modules

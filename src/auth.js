@@ -1,5 +1,4 @@
 import { initializeApp } from 'firebase/app';
-import './styles.css'; // Импорт вашего CSS файла
 import {
   getAuth,
   GoogleAuthProvider,
